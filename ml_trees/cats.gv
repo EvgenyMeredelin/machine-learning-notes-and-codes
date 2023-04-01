@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Fur_gray <= 0.5\nentropy = 0.954\nsamples = 8\nvalue = [3, 5]\nclass = Y", fillcolor="#b0d8f5"] ;
+1 [label="Fur_brown <= 0.5\nentropy = 0.971\nsamples = 5\nvalue = [3, 2]\nclass = N", fillcolor="#f6d5bd"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Height_small <= 0.5\nentropy = 0.918\nsamples = 3\nvalue = [2, 1]\nclass = N", fillcolor="#f2c09c"] ;
+1 -> 2 ;
+3 [label="entropy = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = N", fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Y", fillcolor="#399de5"] ;
+2 -> 4 ;
+5 [label="Height_small <= 0.5\nentropy = 1.0\nsamples = 2\nvalue = [1, 1]\nclass = N", fillcolor="#ffffff"] ;
+1 -> 5 ;
+6 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Y", fillcolor="#399de5"] ;
+5 -> 6 ;
+7 [label="entropy = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = N", fillcolor="#e58139"] ;
+5 -> 7 ;
+8 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Y", fillcolor="#399de5"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
